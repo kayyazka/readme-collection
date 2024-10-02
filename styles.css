@@ -1,0 +1,78 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+.hero {
+    background: linear-gradient(135deg, #282c34, #61dafb);
+    color: white;
+    padding: 50px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+#buttonList {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Make buttons stack vertically */
+    align-items: flex-start; /* Align buttons to the left */
+    padding-left: 20px; /* Optional: add padding for better appearance */
+}
+
+/* Button Styles */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #61dafb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px; /* Fixed width to align buttons neatly */
+    display: flex; /* Allow icon and text to be inline */
+    align-items: center; /* Center the icon and text vertically */
+}
+
+/* Icon styles */
+button i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #21a1f1;
+}
+
+/* README Container */
+.readme-container {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: none; /* Hidden initially */
+
+
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #282c34;
+    color: white;
+    font-size: 0.9rem;
+}

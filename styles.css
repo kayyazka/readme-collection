@@ -16,10 +16,12 @@ body {
     background: linear-gradient(135deg, #282c34, #61dafb);
     color: white;
     padding: 50px 0;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation for hero */
 }
 
 h1 {
     font-size: 2.5rem;
+    animation: slideIn 1s ease forwards; /* Slide-in animation for heading */
 }
 
 #buttonList {
@@ -39,10 +41,12 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transform transition */
     width: 200px; /* Fixed width to align buttons neatly */
     display: flex; /* Allow icon and text to be inline */
     align-items: center; /* Center the icon and text vertically */
+    position: relative; /* For pseudo-element positioning */
+    overflow: hidden; /* Ensure the pseudo-element is contained */
 }
 
 /* Icon styles */
@@ -53,6 +57,36 @@ button i {
 /* Button Hover Effect */
 button:hover {
     background-color: #21a1f1;
+    transform: scale(1.05); /* Scale up the button on hover */
+}
+
+/* Button Active Effect */
+button:active {
+    transform: scale(0.95); /* Scale down when button is pressed */
+}
+
+/* Cool Hover Effect with Pseudo-element */
+button::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300%; /* Start width */
+    height: 300%; /* Start height */
+    background: rgba(255, 255, 255, 0.2); /* White with some transparency */
+    border-radius: 50%; /* Circle shape */
+    transition: all 0.5s ease; /* Smooth transition */
+    transform: translate(-50%, -50%) scale(0); /* Center and scale down */
+    z-index: 0; /* Behind the text */
+}
+
+button:hover::after {
+    transform: translate(-50%, -50%) scale(1); /* Scale up on hover */
+}
+
+button {
+    position: relative; /* For pseudo-element positioning */
+    z-index: 1; /* Ensure button text is above the pseudo-element */
 }
 
 /* README Container */
@@ -65,14 +99,24 @@ button:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: left;
     display: none; /* Hidden initially */
-
-
 }
 
+/* Footer Styles */
 footer {
     margin-top: 50px;
     padding: 20px;
     background-color: #282c34;
     color: white;
     font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }

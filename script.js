@@ -1,16 +1,16 @@
 // Map of aliases to their corresponding README URLs
 const readmeFiles = {
-    "My First README": 'https://github.com/kayyazka/readme-collection/blob/main/README1.md',
-    "My Second README": 'https://github.com/kayyazka/readme-collection/blob/main/README2.md',
-    "My Third README": 'https://github.com/kayyazka/readme-collection/blob/main/README3.md'
+    "My First README": 'https://github.com/kayyazka/readme-collection/blob/main/readme/README1.md',
+    "My Second README": 'https://github.com/kayyazka/readme-collection/blob/main/readme/README2.md',
+    "My Third README": 'https://github.com/kayyazka/readme-collection/blob/main/readme/README3.md'
 }; // Add more aliases and file URLs here
 
 const buttonList = document.getElementById('buttonList');
 
-// Function to handle button click and redirect
+// Function to handle button click and open in a new tab
 function handleButtonClick(url) {
-    // Redirect to the specified URL
-    window.location.href = url; // Redirect to the README URL
+    // Open the specified URL in a new tab
+    window.open(url, '_blank'); // Open in a new tab
 }
 
 // Function to dynamically generate buttons listed down

@@ -1,10 +1,14 @@
 // Map of aliases to their corresponding README URLs
+// const readmeFiles = {
+//     "My First README": 'https://github.com/kayyazka/readme-collection/blob/main/readme/README1.md',
+//     "My Second README": 'https://github.com/kayyazka/readme-collection/blob/main/readme/README2.md',
+//     "My Third README": 'https://github.com/kayyazka/readme-collection/blob/main/readme/README3.md'
+// }; // Add more aliases and file URLs here
 const readmeFiles = {
-    "My First README": 'https://github.com/kayyazka/readme-collection/blob/main/readme/README1.md',
-    "My Second README": 'https://github.com/kayyazka/readme-collection/blob/main/readme/README2.md',
-    "My Third README": 'https://github.com/kayyazka/readme-collection/blob/main/readme/README3.md'
-}; // Add more aliases and file URLs here
-
+    "Git and Github": 'readme/git.html',
+    "Linux Fundamentals": 'readme/linux.html',
+    "Webserver": 'readme/webserver.html'
+};
 const buttonList = document.getElementById('buttonList');
 
 // Function to handle button click and open in a new tab
